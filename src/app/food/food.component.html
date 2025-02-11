@@ -1,0 +1,11 @@
+<div>
+    <div class="client" style="background-image: url('{{food.image}}');">
+    </div>
+      <form class="d-flex mb-4" style="padding-left: 5%; padding-right: 5%;" #homepage = "ngForm" (ngSubmit)="onBasket()">
+        <h4 style="float: left;">{{food.foodname}}  £{{food.price.toFixed(2)}}</h4>
+        <div data-mdb-input-init class="form-outline me-3" style="width: 14rem; margin-left: auto;">    
+            <input type="number" [(ngModel)]="quantity" name="quantity" class="form-control" placeholder="AA11 1AA" #username="ngModel" value="0" min="0" max="10" step="1" data-bs-round="0"/>
+        </div>
+        <button type="submit" [disabled]="quantity == 0" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Add To Basket</button>
+    </form>
+</div>

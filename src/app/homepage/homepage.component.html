@@ -1,0 +1,18 @@
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">Restaurants Near You!</h1>
+        <p *ngIf="!us.isAuthenticated()" class="lead font-weight-normal">Just put your postcode into the search bar and see what restaurants are near
+            you for delivery</p>
+        <form *ngIf="!us.isAuthenticated()" class="d-flex justify-content-center mb-4" #homepage = "ngForm" (ngSubmit)="onSubmit()">
+            <div data-mdb-input-init class="form-outline me-3" style="width: 14rem">    
+                <input type="text" [(ngModel)]="postcode" name="postcode" class="form-control" placeholder="AA11 1AA" #username="ngModel" required pattern="^[A-Z]+$" minlength="7"/>
+            </div>
+            <button type="submit" [disabled]="postcode.length < 7" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Search</button>
+        </form>
+        <form *ngIf="us.isAuthenticated()" (ngSubmit)="onSubmit()" #homepage = "ngForm">
+            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Search</button>
+        </form>
+    </div>
+    <div class="product-device box-shadow d-none d-md-block"></div>
+    <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+</div>

@@ -1,0 +1,26 @@
+.client{
+    background-color: whitesmoke;
+    background-size: 100%;
+    height: 150px;
+    margin-top: 25px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+button{
+    margin-right: 5px;
+}
+
+/* img{
+    width: 100%;
+    height: 150px;
+} */
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}

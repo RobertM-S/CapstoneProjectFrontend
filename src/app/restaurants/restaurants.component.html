@@ -1,0 +1,11 @@
+<h1>Restaurants</h1>
+<div *ngIf="restaurants.length > 0">
+    <div class="row">
+        <div *ngFor="let restaurant of restaurants" class="col-4">
+        <app-restaurant [restaurant]="restaurant"></app-restaurant> 
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="restaurants.length < 1">
+    <h1>There are no restaurants available at this location</h1>
+</div>

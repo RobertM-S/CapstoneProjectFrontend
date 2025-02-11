@@ -1,0 +1,12 @@
+.client{
+    background-color: whitesmoke;
+    background-size: cover;
+    height: 400px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
