@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RestaurantprofileComponent } from './restaurantprofile.component';
+import { HeaderComponent } from '../header/header.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('RestaurantprofileComponent', () => {
   let component: RestaurantprofileComponent;
@@ -8,7 +10,8 @@ describe('RestaurantprofileComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [RestaurantprofileComponent]
+      imports: [HttpClientTestingModule],
+      declarations: [RestaurantprofileComponent, HeaderComponent]
     })
     .compileComponents();
 
